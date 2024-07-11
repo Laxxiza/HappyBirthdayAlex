@@ -4,7 +4,6 @@ const http = require("http").createServer(app);
 const fs = require("fs");
 const path = require("path");
 const io = require("socket.io")(http);
-const url = require('url');
 
 const SERVER_DATA = {
     current_quest_index: 0,
@@ -49,6 +48,6 @@ function isFinished(quest_id){
     return false;
 }
 
-http.listen(3000, () => {
-    console.log("Server listen 3000");
+http.listen(8080, () => {
+    console.log("Server listen 8080");
 });

@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $(document).on('click', '#fail', function(){
-        const sucBut = $("#success");
-        let opacity = parseFloat(sucBut.css("opacity"));
+        const sucBut = $("#hidebut");
+        let opacity = sucBut.css("opacity");
         console.log(opacity);
-        opacity = opacity + 0.05;
-        console.log(opacity.toFixed(10));
+        opacity = (parseFloat(opacity)+0.05).toFixed(10);
+        console.log(opacity);
         sucBut.css("opacity", opacity);
     });
 });

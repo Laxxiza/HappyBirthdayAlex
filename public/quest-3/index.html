@@ -16,6 +16,7 @@
         <script src="./quest-3/main.js"></script>
         <link rel="stylesheet" href="./quest-3/main.css"/>
         <script src="/assets/modal-hint.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -26,16 +27,16 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content bg-dark">
                         <div class="modal-body bg-dark rounded">
-                            <h2 class="fs-5">Спасибо Егору за этот перкрастный мемный случай!</h2>
+                            <h2 class="fs-5">Baldur's Gate 3! Но на минималках)</h2>
                             <hr>
-                            <p>Я ему даю свою сигариллу, а он целой грудью вдохнул, я стою в ахуе, смотрю на него… Он давай кашлять и говорит:
-                                - Че-то мне плохо, я подышу
-                                Ну и дышал он так какое-то время. 
-                                Потом встает, начинает идти и, как бочка падает. Мы с Аней тупо стоим, смотрим… а он лежит</p>
+                            <p class="m-0">Поверь на слово, у тебя выпало:</p>
+                            <h1><span id="roll-num" class="badge text-bg-secondary">3</span></h1>
+                            <p id="roll-text" class="m-0">Не повезло, не повезло</p>
                         </div>
                         <div class="modal-footer bg-dark">
                             <input type="radio" class="btn-check" name="opt" id="btn-check-outlined1" autocomplete="off">
-                            <button id="success" type="button" class="btn btn-outline-warning m-1" data-bs-dismiss="modal">Давай дальше</button>
+                            <button id="success" type="button" class="btn btn-outline-warning m-1" data-bs-dismiss="modal" style="display: none;">Давай дальше</button>
+                            <button id="fail" type="button" class="btn btn-outline-warning m-1" data-bs-dismiss="modal">Еще раз!</button>
                         </div>
                     </div>
                 </div>
@@ -51,39 +52,13 @@
                     </div>
                 </div>
             </div>
-            <div class="position-absolute top-50 start-50 translate-middle w-75 mb-3">
+            <div class="position-absolute start-50 translate-middle w-75 mb-3" style="top:25%">
                 <div class="row align-items-center justify-content-center m-1 text-center">
                     <h1>
                         Вопрос <span class="badge text-bg-secondary">№3</span>
                     </h1>
-                    <p class="fs-2">ТАПАЙ СИГУ!!</p>
-                    <p class="fs-4">СПАСИ ЕГОРА!!</p>
-                    <hr />
-                    <!-- <div id="cigarette-container" class="position-relative mb-3" style="width: 25px;height: 300px;background-color: gray;">
-                        <div id="burning-part" class="position-absolute bottom-0 start-0 w-100" style="height: 100%;background-color: rgb(128, 57, 0);"></div>
-                        <div id="burning-sec" class="position-absolute bottom-0 start-0 w-100" style="height: 21%;background-color: rgb(255, 255, 255);"></div>
-                    </div> -->
-
-                    <div class="container-cigarette" style="height: 100%">
-                        <div class="cigarette">
-                            <span style="--i:1"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:2"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:3"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:4"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:5"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:6"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:7"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:8"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:9"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                            <span style="--i:10"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <hr />
+                    <input type="radio" class="btn-check" name="opt" id="btn-check-outlined4" autocomplete="off">
+                    <label id="rollButton" class="btn btn-outline-warning m-1" for="btn-check-outlined4">Крути!</label><br>
                 </div>
             </div>
         </div>

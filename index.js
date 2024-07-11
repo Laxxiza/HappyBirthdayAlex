@@ -10,12 +10,17 @@ const SERVER_DATA = {
     statuses: {}
 }
 
-//app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
     res.redirect("/quest?quest=0");
+});
+
+app.post('/test2', function (req, res, next) {
+    console.log(req.body)
+    res.json(req.body)
 });
 
 app.get("/quest", (req, res) => {
@@ -42,14 +47,10 @@ app.get("/setrestart", (req, res) => {
     res.json(SERVER_DATA);
 });
 
-app.get('/api/endpoint1', (req, res) => {
-    res.send(JSON.stringify({value: 1}));
+app.post('/test', function (req, res, next) {
+    console.log(req.body)
+    res.json(req.body)
 });
-
-app.get('/api/endpoint2', (req, res) => {
-    // Set Content-Type differently for this particular API
-    res.send("Quest file not found");
-})
 
 io.on("connection", (socket) => {
     const req = socket.request;

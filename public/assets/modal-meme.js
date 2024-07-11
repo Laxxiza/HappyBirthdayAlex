@@ -24,7 +24,7 @@ $(document).ready(function () {
     const myModalEl = document.getElementById('meme-modal');
     let pTag = $(".meme-text");
     let imgDiv = $(".meme-img");
-    let imgTag = $("img");
+    let imgTag = $(".meme-img img");
 
     myModalEl.addEventListener("hidden.bs.modal", (event) => {
         pTag.addClass("fade");

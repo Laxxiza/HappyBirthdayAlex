@@ -31,12 +31,14 @@ app.get("/quest", (req, res) => {
 });
 
 app.get("/status", (req, res) => {
+    res.set('Content-Type', 'text/html');
     return res.status(200).send(SERVER_DATA);
 });
 
 app.get("/restart", (req, res) => {
     SERVER_DATA.current_quest_index = 0;
     SERVER_DATA.statuses = {};
+    res.set('Content-Type', 'text/html');
     return res.status(200).send(JSON.stringify(SERVER_DATA));
 });
 

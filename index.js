@@ -37,12 +37,12 @@ app.get("/status", (req, res) => {
 app.get("/restart", (req, res) => {
     SERVER_DATA.current_quest_index = 0;
     SERVER_DATA.statuses = {};
-    return res.status(200).send(SERVER_DATA);
+    return res.status(200).send(JSON.stringify(SERVER_DATA));
 });
 
 io.on("connection", (socket) => {
     const req = socket.request;
-    socket.emit('initial data', SERVER_DATA);
+    socket.emit('initial data', JSON.stringify(SERVER_DATA));
 
     socket.on('quest update', (data) => {
         SERVER_DATA.statuses[data.id] = data.value;

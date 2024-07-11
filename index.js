@@ -36,19 +36,19 @@ app.get("/quest", (req, res) => {
 });
 
 app.get("/getstatus", (req, res) => {
-    res.send(SERVER_DATA);
+    res.send([SERVER_DATA]);
 });
 
 app.get("/setrestart", (req, res) => {
     SERVER_DATA.current_quest_index = 0;
     SERVER_DATA.statuses = {};
-    res.send(SERVER_DATA);
+    res.send([SERVER_DATA]);
 });
 
 app.get("/api/books", (req, res) => {
     res.send([
         { id: 1, title: "book 1" },
-        { id: 2, title: "book 2" },
+        { id: 2, title: "book 3" },
     ]);
 });
 

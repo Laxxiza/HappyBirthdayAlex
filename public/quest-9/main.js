@@ -7,7 +7,7 @@ $(document).ready(function () {
     timeline.add({
         targets: "h1",
         opacity: [1, 0],
-        duration: 1000,
+        duration: 2500,
     });
 
     timeline.add({

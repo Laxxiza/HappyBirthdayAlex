@@ -5,4 +5,4 @@ meta:
     version: 18
 run:
   command: npm run start
-  containerPort: 80,8080,5000
+  containerPort: 80

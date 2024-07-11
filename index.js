@@ -35,23 +35,16 @@ app.get("/quest", (req, res) => {
     res.sendFile(questPath);
 });
 
-app.get("/getstatus", (req, res) => {
+app.get("/status", (req, res) => {
     res.set("Content-Type", "application/json");
     res.json(SERVER_DATA);
 });
 
-app.get("/setrestart", (req, res) => {
+app.get("/restart", (req, res) => {
     SERVER_DATA.current_quest_index = 0;
     SERVER_DATA.statuses = {};
     res.set("Content-Type", "application/json");
     res.json(SERVER_DATA);
-});
-
-app.get("/api/books", (req, res) => {
-    res.send([
-        { id: 1, title: "book 1" },
-        { id: 2, title: "book 2" },
-    ]);
 });
 
 io.on("connection", (socket) => {

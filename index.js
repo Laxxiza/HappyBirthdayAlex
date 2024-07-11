@@ -30,16 +30,16 @@ app.get("/quest", (req, res) => {
     res.sendFile(questPath);
 });
 
-app.get("/status", (req, res) => {
+app.get("/getstatus", (req, res) => {
     res.set('Content-Type', 'application/json');
-    return res.json(SERVER_DATA);
+    res.json(SERVER_DATA);
 });
 
-app.get("/restart", (req, res) => {
+app.get("/setrestart", (req, res) => {
     SERVER_DATA.current_quest_index = 0;
     SERVER_DATA.statuses = {};
     res.set('Content-Type', 'application/json');
-    return res.json(JSON.stringify(SERVER_DATA));
+    res.json(SERVER_DATA);
 });
 
 io.on("connection", (socket) => {

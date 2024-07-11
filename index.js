@@ -32,14 +32,14 @@ app.get("/quest", (req, res) => {
 
 app.get("/status", (req, res) => {
     res.set('Content-Type', 'application/json');
-    return res.status(200).send(SERVER_DATA);
+    return res.json(SERVER_DATA);
 });
 
 app.get("/restart", (req, res) => {
     SERVER_DATA.current_quest_index = 0;
     SERVER_DATA.statuses = {};
     res.set('Content-Type', 'application/json');
-    return res.status(200).send(JSON.stringify(SERVER_DATA));
+    return res.json(JSON.stringify(SERVER_DATA));
 });
 
 io.on("connection", (socket) => {

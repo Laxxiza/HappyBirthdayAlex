@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
     });
 });
 
-const port = 8080;
+const port = 80;
 http.listen(port, () => {
     console.log("Server listen 8080");
 });

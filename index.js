@@ -42,6 +42,10 @@ app.get("/setrestart", (req, res) => {
     res.json(SERVER_DATA);
 });
 
+app.get('/api/endpoint1', (req, res) => {
+    res.send(JSON.stringify({value: 1}));
+});
+
 io.on("connection", (socket) => {
     const req = socket.request;
     socket.emit('initial data', JSON.stringify(SERVER_DATA));

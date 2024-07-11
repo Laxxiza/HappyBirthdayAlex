@@ -49,12 +49,7 @@ app.get('/api/endpoint1', (req, res) => {
 app.get('/api/endpoint2', (req, res) => {
     // Set Content-Type differently for this particular API
     res.set({'Content-Type': 'application/xml'});
-    res.send(`<note>
-        <to>Tove</to>
-        <from>Jani</from>
-        <heading>Reminder</heading>
-        <body>Don't forget me this weekend!</body>
-        </note>`);
+    res.send("Quest file not found");
 })
 
 io.on("connection", (socket) => {

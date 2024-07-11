@@ -48,7 +48,6 @@ app.get('/api/endpoint1', (req, res) => {
 
 app.get('/api/endpoint2', (req, res) => {
     // Set Content-Type differently for this particular API
-    res.set({'Content-Type': 'application/xml'});
     res.send("Quest file not found");
 })
 

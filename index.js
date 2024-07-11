@@ -35,11 +35,11 @@ app.get("/quest", (req, res) => {
     res.sendFile(questPath);
 });
 
-app.get("/getstatus", (req, res) => {
+app.get("/status", (req, res) => {
     res.send([SERVER_DATA]);
 });
 
-app.get("/setrestart", (req, res) => {
+app.get("/restart", (req, res) => {
     SERVER_DATA.current_quest_index = 0;
     SERVER_DATA.statuses = {};
     res.send([SERVER_DATA]);
@@ -54,7 +54,7 @@ app.get("/api/books", (req, res) => {
 
 io.on("connection", (socket) => {
     const req = socket.request;
-    socket.emit("initial data", JSON.stringify(SERVER_DATA));
+    socket.emit("initial data", SERVER_DATA);
 
     socket.on("quest update", (data) => {
         SERVER_DATA.statuses[data.id] = data.value;

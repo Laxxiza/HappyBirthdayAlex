@@ -5,7 +5,7 @@ $(document).ready(function () {
     });
 
     timeline.add({
-        targets: "h1",
+        targets: "#name",
         opacity: [1, 0],
         duration: 2500,
     });
@@ -19,10 +19,10 @@ $(document).ready(function () {
         delay: anime.stagger(5000), // Задержка между анимациями абзацев
         offset: "-=500", // Начинает на 500мс раньше конца предыдущей анимации
         rotate: {
-            duration: 10000,
+            duration: 5000,
             value: function (el, i, total) {
                 if ($(el).attr("id") == "rotatible") {
-                    return 360 * 12;
+                    return 360 * 6;
                 }
             },
         },
@@ -45,7 +45,7 @@ $(document).ready(function () {
     timeline.add({
         targets: "#success",
         translateY: [
-            { value: "100vh", duration: 0 }, // Начальная позиция за пределами экрана
+            { value: "0vh", duration: 0 }, // Начальная позиция за пределами экрана
             { value: "0vh", duration: 2000, easing: 'spring(1, 80, 10, 0)' }, // Остановиться по середине экрана
         ],
         opacity: [

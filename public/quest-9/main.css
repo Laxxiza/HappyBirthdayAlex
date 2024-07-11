@@ -1,7 +1,13 @@
+#titlesContainer {
+  overflow: hidden;
+  height: 100vh; /* Высота экрана */
+}
+
 #titles p {
   position: relative;
 }
 
 #success {
   opacity: 0; /* Прозрачность, чтобы плавно появлялась */
+  position: absolute;
 }

@@ -4,5 +4,5 @@ meta:
     name: npm
     version: 18
 run:
-  scriptName: index.js
-  containerPort: 8080
+  command: npm run start
+  containerPort: 80,8080,5000

@@ -18,9 +18,8 @@ app.get("/", (req, res) => {
     res.redirect("/quest?quest=0");
 });
 
-app.post('/test2', function (req, res, next) {
-    console.log(req.body)
-    res.json(req.body)
+app.get('/test2', function (req, res, next) {
+    res.send({ some: 'json' })
 });
 
 app.get("/quest", (req, res) => {
@@ -47,9 +46,8 @@ app.get("/setrestart", (req, res) => {
     res.json(SERVER_DATA);
 });
 
-app.post('/test', function (req, res, next) {
-    console.log(req.body)
-    res.json(req.body)
+app.get('/test', function (req, res, next) {
+    res.send('<p>some html</p>')
 });
 
 io.on("connection", (socket) => {

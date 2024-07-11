@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Салександр туц-туц</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./quest-6/main.js"></script>
+        <link rel="stylesheet" href="./quest-6/main.css"/>
+        <script src="/assets/modal-hint.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="position-relative m-3">
+                <div id="liveAlertPlaceholder" class="position-absolute top-0 start-50 translate-middle-x"></div>
+            </div>
+            <div class="modal fade" id="modal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-body bg-dark rounded">
+                            <h2 class="fs-5">Спасибо Егору за этот перкрастный мемный случай!</h2>
+                            <hr>
+                            <p>Я ему даю свою сигариллу, а он целой грудью вдохнул, я стою в ахуе, смотрю на него… Он давай кашлять и говорит:
+                                - Че-то мне плохо, я подышу
+                                Ну и дышал он так какое-то время. 
+                                Потом встает, начинает идти и, как бочка падает. Мы с Аней тупо стоим, смотрим… а он лежит</p>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <input type="radio" class="btn-check" name="opt" id="btn-check-outlined1" autocomplete="off">
+                            <button id="success" type="button" class="btn btn-outline-warning m-1" data-bs-dismiss="modal">Давай дальше</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="hint-modal" tabindex="-1" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-body bg-dark rounded">
+                        <h2 class="hint-title fs-5 text-center">А что же дальше?</h2>
+                        <hr>
+                        <p class="hint-text text-center m-0 fade">Иди сюда</p>
+                        <hr>
+                        <div class="hint-img text-center fade" style="display: none;"><img src="" class="img-fluid" alt="hint" style="max-width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute top-50 start-50 translate-middle w-75 mb-3">
+                <div class="row align-items-center justify-content-center m-1 text-center">
+                    <h1>
+                        Вопрос <span class="badge text-bg-secondary">№6</span>
+                    </h1>
+                    <p class="fs-2">ТАПАЙ СИГУ!!</p>
+                    <p class="fs-4">СПАСИ ЕГОРА!!</p>
+                    <hr />
+                    <!-- <div id="cigarette-container" class="position-relative mb-3" style="width: 25px;height: 300px;background-color: gray;">
+                        <div id="burning-part" class="position-absolute bottom-0 start-0 w-100" style="height: 100%;background-color: rgb(128, 57, 0);"></div>
+                        <div id="burning-sec" class="position-absolute bottom-0 start-0 w-100" style="height: 21%;background-color: rgb(255, 255, 255);"></div>
+                    </div> -->
+
+                    <div class="container-cigarette" style="height: 100%">
+                        <div class="cigarette">
+                            <span style="--i:1"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:2"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:3"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:4"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:5"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:6"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:7"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:8"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:9"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                            <span style="--i:10"><i>Егор</i><i class="txt">КУРЕНИЕ'УБИВАЕТ</i><i>|</i></span>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+    </body>
+</html>

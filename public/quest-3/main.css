@@ -1,0 +1,157 @@
+body, html {
+    background: #1D1F20;
+    color: white;
+    height: 100%;
+  }
+  main {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .cigarette-container {
+    width: 20px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.cigarette {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #fff, #ccc 90%);
+    position: absolute;
+    bottom: 0;
+}
+
+.burning-part {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #ff4500, #ff4500);
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+
+.burning-sec {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #ff4500, #ff4500);
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+  
+  .button {
+    background: #2B2D2F;
+    height: 80px;
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .text {
+    font: bold 1.25rem/1 poppins;
+    color: #71DFBE;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-52%);
+    left: 0;
+    right: 0;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    height: 10px;
+    width: 0;
+    right: 0;
+    top: 50%;
+    left: 50%;
+    border-radius: 200px;
+    transform: translateY(-50%) translateX(-50%);
+    background: #006efd;
+  }
+  
+  svg {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    right: 0;
+  }
+  
+  .check {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+
+
+
+
+  .container-cigarette {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .cigarette {
+      transform-style: preserve-3d;
+      animation: animate 15s linear infinite;
+  }
+  @keyframes animate {
+      0% {
+          transform: perspective(1000px) rotateX(0deg);
+      }
+      100% {
+          transform: perspective(1000px) rotateX(360deg);
+      }
+  }
+  .container-cigarette .cigarette span {
+      position: absolute;
+      color: #fff;
+      font-size: 1.35em;
+      font-weight: 900px;
+      text-transform: uppercase;
+      line-height: 0.76em;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+      transform: translate(-50%,-50%) rotateX(calc(var(--i)*36deg)) translateZ(25px);
+      background: rgba(0,0,0,0.25);
+      transform-style: preserve-3d;
+  }
+  .container-cigarette .cigarette span i {
+      font-style: normal;
+      color: #ec9535;
+  }
+  .container-cigarette .cigarette span .txt {
+      font-style: normal;
+      color: white;
+  }
+  .container-cigarette .cigarette span .txt span {
+      position: relative;
+      font-style: normal;
+      color: white;
+      background: rgba(0, 0, 0, 0);
+  }
+  .container-cigarette .cigarette span i:first-child:after {
+      content: 'L';
+      color: #ccc;
+      text-transform: lowercase;
+  }
+  .container-cigarette .cigarette span i:last-child {
+      color: #f00;
+      filter: blur(2px);
+      text-shadow: -4px 0 2px #000, 8px 0 20px #f00, 8px 0 20px #f00, 8px 0 0 #222, 12px 0 #555, 16px 0 #666, 20px 0 #777, 24px 0 #999;
+  }

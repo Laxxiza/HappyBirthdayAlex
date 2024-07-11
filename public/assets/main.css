@@ -1,0 +1,98 @@
+body, html {
+    background: #1D1F20;
+    color: white;
+    height: 100%;
+  }
+  main {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .cigarette-container {
+    width: 20px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.cigarette {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #fff, #ccc 90%);
+    position: absolute;
+    bottom: 0;
+}
+
+.burning-part {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #ff4500, #ff4500);
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+
+.burning-sec {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #ff4500, #ff4500);
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+  
+  .button {
+    background: #2B2D2F;
+    height: 80px;
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .text {
+    font: bold 1.25rem/1 poppins;
+    color: #71DFBE;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-52%);
+    left: 0;
+    right: 0;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    height: 10px;
+    width: 0;
+    right: 0;
+    top: 50%;
+    left: 50%;
+    border-radius: 200px;
+    transform: translateY(-50%) translateX(-50%);
+    background: #006efd;
+  }
+  
+  svg {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    right: 0;
+  }
+  
+  .check {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }

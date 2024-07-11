@@ -1,0 +1,7 @@
+#titles p {
+  position: relative;
+}
+
+#success {
+  opacity: 0; /* Прозрачность, чтобы плавно появлялась */
+}

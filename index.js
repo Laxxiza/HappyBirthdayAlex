@@ -30,6 +30,16 @@ app.get("/quest", (req, res) => {
     res.sendFile(questPath);
 });
 
+app.get("/status", (req, res) => {
+    return res.status(200).send(SERVER_DATA);
+});
+
+app.get("/restart", (req, res) => {
+    SERVER_DATA.current_quest_index = 0;
+    SERVER_DATA.statuses = {};
+    return res.status(200).send(SERVER_DATA);
+});
+
 io.on("connection", (socket) => {
     const req = socket.request;
     socket.emit('initial data', SERVER_DATA);
@@ -39,14 +49,6 @@ io.on("connection", (socket) => {
         console.log(SERVER_DATA);
     });
 });
-
-function isFinished(quest_id){
-    let statuses = SERVER_DATA.statuses;
-    if(statuses[quest_id] == "finished"){
-        return true;
-    }
-    return false;
-}
 
 http.listen(8080, () => {
     console.log("Server listen 8080");

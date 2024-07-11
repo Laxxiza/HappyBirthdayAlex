@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="/assets/main.css"/>
         <script src="/assets/modal-meme.js"></script>
         <script src="/assets/modal-hint.js"></script>
+        <script src="./quest-9/main.js"></script>
+        <link rel="stylesheet" href="./quest-9/main.css"/>
     </head>
     <body>
         <div class="container">
@@ -40,23 +42,22 @@
                     </div>
                 </div>
             </div>
-            <div class="position-absolute top-50 start-50 translate-middle w-75 mb-3">
+            <div id="titlesContainer" class="position-absolute top-50 start-50 translate-middle w-75 mb-3">
                 <div class="row align-items-center justify-content-center m-1 text-center">
                     <h1>Ну что... <span class="badge text-bg-secondary">Александр</span></h1>
-                    <hr>
-                    <p class="fs-4">Ну вот и все)))</p>
-                    <p class="fs-4">Надеемся не зря голову себе ломали и тебе понравились наши шутки и приколы.</p>
-                    <p class="fs-4">В завершении хотим сказать, что ты крутой друг! Лучший мужчина! И здоровский брат!</p>
-                    <p class="fs-4">Двигайся к целям и мечтам.</p>
-                    <p class="fs-4">Оставайся супер веселым человеком. Никогда не опускай руки! </p>
-                    <p class="fs-4">Ну а создатели всей этой шумихи:</p>
-                    <hr>
-                    <p class="fs-4 text-success">Главный кодер - Влад</p>
-                    <p class="fs-4 text-success">Главный редактор - Софа</p>
-                    <hr>
                     <input type="radio" class="btn-check" name="opt" id="btn-check-outlined1" autocomplete="off">
                     <label id="success" class="btn btn-outline-warning m-1" for="btn-check-outlined1">А что дальше?</label><br>
                 </div>
+            </div>
+            <div id="titles" class="text-center">
+                <p id="p1" class="fs-4">Ну вот и все)))</p>
+                <p id="p2" class="fs-4">Надеемся не зря голову себе ломали и тебе понравились наши шутки и приколы.</p>
+                <p id="p3" class="fs-4">В завершении хотим сказать, что ты крутой друг! Лучший мужчина! И здоровский брат!</p>
+                <p id="p4" class="fs-4">Двигайся к целям и мечтам.</p>
+                <p id="p5" class="fs-4">Оставайся супер веселым человеком. Никогда не опускай руки! </p>
+                <p id="p6" class="fs-4">Ну а создатели всей этой шумихи:</p>
+                <p id="rotatible" class="fs-4 text-success">Главный кодер - Влад</p>
+                <p id="scalable" class="fs-4 text-success">Главный редактор - Софа</p>
             </div>
         </div>
         <script src="/socket.io/socket.io.js"></script>
